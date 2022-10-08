@@ -1,0 +1,7 @@
+@inproceedings{zson,
+        title = {ZSON: Zero-Shot Object-Goal Navigation using Multimodal Goal Embeddings},
+        author = {Majumdar, Arjun and Aggarwal, Gunjan and Devnani, Bhavika and Hoffman, Judy and Batra, Dhruv},
+        booktitle = {Proceedings of {NeurIPS}},
+        year = {2022},
+}
+Footer
