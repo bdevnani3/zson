@@ -199,6 +199,66 @@
             </tr>
           </table>
 
+          <br><br>
+
+          <div class="content" align="left" style="width: 100%;">
+            <div class="title"><b>Zero-shot & Open World Object Nav</b></div>
+            <p>
+              Currently, the ObjectNav task is formulated over a closed vocabulary (“chair”, “bed”, “sofa” etc). With our work, we push embodied agents to find objects in an open-world setting, and do so in a zero shot fashion. This allows us to feed in specific goals that the agent may or may not have encountered like “flat-head screwdriver” or the “medicine case near the bathroom sink.” and have our agent navigate to it. 
+            </p>
+            <p style="text-align:center;">
+            <img src="images/robot.png" width=400></p>
+          </div>
+
+          <br><br>
+
+          <div class="content" align="left" style="width: 100%;">
+            <div class="title"><b>Method</b></div>
+            <p>
+              We create a visio-linguistic embedding space to decouple the two problems – (1) describing and representing semantic goals (“chair”, “brown chair”, picture of brown chair) from (2) learning to navigate to semantic goals. 
+              <p style="text-align:center;"><img src="images/idea.png" width=600></p>
+              <br>
+              To train the navigation agent, we use a CLIP[cite] visual encoder to generate a semantic goal embedding that is used to guide navigation.
+              
+              <br>
+              <p style="text-align:center;">
+              <video width="60%" loop="" autoplay="" playsinline="" muted="" class="loop">
+                <source src="images/training.mp4" type="video/mp4">
+              </video></p>
+              <br>
+              When evaluating, we transform the object-goals into semantic goal embeddings using the CLIP text encoder. 
+              <br>
+            </p>
+            <p style="text-align:center;"><video width="60%" loop="" autoplay="" playsinline="" muted="" class="loop">
+              <source src="images/inference.mp4" type="video/mp4">
+            </video></p>
+          </div>
+
+          <br><br>
+
+          <div class="content" align="left" style="width: 100%;">
+            <div class="title"><b>Agent in Action</b></div>
+            <p>
+              Our agent navigating using the provided prompts. 
+              <br>
+            <p style="text-align:center;">
+            <video width="50%" loop="" autoplay="" playsinline="" muted="" class="loop">
+              <source src="images/nav1.mp4" type="video/mp4">
+            </video>
+
+            <br>
+            <video width="50%" loop="" autoplay="" playsinline="" muted="" class="loop">
+              <source src="images/nav2.mp4" type="video/mp4">
+            </video>
+
+            <br>
+            <video width="50%" loop="" autoplay="" playsinline="" muted="" class="loop">
+              <source src="images/nav3.mp4" type="video/mp4">
+            </video>
+            </p>
+          </div>
+          
+
     </div>
 
 <br><br><br><br>  
